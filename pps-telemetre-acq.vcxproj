@@ -48,7 +48,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\National Instruments\NI-DAQ\DAQmx ANSI C Dev\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\National Instruments\NI-DAQ\DAQmx ANSI C Dev\include;./inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -73,7 +73,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Acquisitor.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SerialPort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\Acquisitor.h" />
+    <ClInclude Include="inc\SerialPort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
